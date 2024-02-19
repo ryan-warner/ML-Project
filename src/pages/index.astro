@@ -1,13 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 // Reminder we can use <code> to display code snippets
 ---
-<Header />
-<Layout title="Welcome to Astro.">
-	<main>
-		Hi
-	</main>
-</Layout>
-<Footer />
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>ML Project</title>
+	</head>
+	<body>
+		<Header />
+
+		<Footer />
+	</body>
+</html>
