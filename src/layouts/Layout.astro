@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 <!doctype html>
 <html lang="en">
@@ -10,7 +12,9 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>ML Project</title>
 	</head>
-	<body class="bg-light-primary px-12">
+	<body class="bg-light-primary">
+		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>

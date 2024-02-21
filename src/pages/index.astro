@@ -1,18 +1,73 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-// Reminder we can use <code> to display code snippets
+import { Image } from 'astro:assets';// Reminder we can use <code> to display code snippets
+import fakeImage from '../assets/AI_generated_splash.jpg';
+import realImage from '../assets/real_splash.jpg';
 ---
 
 <Layout>
-  <Header />
-    <div class="h-[66vh] flex flex-col justify-center">
-      <div class="text-8xl w-1/2 font-semibold px-16her o bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 text-transparent bg-clip-text">
-        This picture does not exist.
+    <div class="w-full flex flex-col">
+      <div class="h-[66vh] flex gap-24">
+        <div id="typewriter" class="text-8xl w-[45%] font-semibold flex flex-col justify-center px-16 bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 text-transparent bg-clip-text">
+          This picture does not exist.
+        </div>
+        <div class="flex-1 w-full self-center flex justify-center items-center h-full">
+          <Image src={fakeImage} alt="AI Generated Image" class="h-4/5 w-min object-contain rounded-2xl overflow-hidden" />
+        </div>
       </div>
-      <div></div>
-    </div>
-  <Footer />
+      <div class="text-6xl font-semibold">
+        But this one does. 
+      </div>
+      <div id="ty2pewriter" class="text-4xl">
+        Test!
+      </div>
+      <img id="dynamicImage" src={realImage.src} alt="Real Image" class="h-24 w-72 object-cover rounded-2xl overflow-hidden" />
+  </div>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js">
+    import Typewriter from 'typewriter-effect/dist/core';
+    new Typewriter('#typewriter', {
+        strings: ['Hello', 'World'],
+        autoStart: true,
+      });
+  </script>
+  <script>
+    let images = ['assets/AI_generated_splash.jpg', 'assets/real_splash.jpg']; // replace with your image paths
+    let strings = ['This picture does not exist.', 'But this one does.'];
+    let currentIndex = 0;
+    import Typewriter from 'typewriter-effect/dist/core';
+
+    let writer = new Typewriter('#typewriter', {
+      loop: false,
+      cursorClassName: 'bg-text-clip Typewriter__cursor text-transparent',
+    });
+    
+    function changeImage() {
+      let imgElement = document.getElementById('dynamicImage') as HTMLImageElement;
+      imgElement.src = images[currentIndex];
+      currentIndex = (currentIndex + 1) % images.length;
+      
+      function deleteAll() {
+        writer.deleteAll().start().callFunction(() => {
+          console.log("Hi but new");
+          setTimeout(changeText, 1000);
+        });
+      }
+
+      setTimeout(deleteAll, 5000);
+    }
+     function changeText() {
+      console.log("Hi before");
+      console.log(strings[currentIndex]);
+      writer.typeString(strings[currentIndex]).start().callFunction(() => {
+        console.log("Hi");
+        changeImage();
+      })
+    }
+  
+    changeText();
+    
+
+    //setInterval(changeImage, 5000); // change image every 5 seconds
+  </script>
 </Layout>

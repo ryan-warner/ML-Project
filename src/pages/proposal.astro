@@ -1,2 +1,85 @@
 ---
+import Cite from 'citation-js' 
+//const cite = new Cite(fileContent)
+
+/*const html = cite.format('bibliography', {
+  format: 'html',
+  template: 'ieee',
+  lang: 'en-US'
+})*/
+
+import Layout from '../layouts/Layout.astro'
 ---
+<Layout>
+    <div class="flex flex-col gap-12">
+        <div class="h-[60vh] w-full flex flex-col justify-center bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500">
+            <div class="text-white text-8xl font-semibold px-[15%]">Project Proposal</div>
+        </div>
+        <div class=" px-[15%] flex flex-col gap-8">
+            <div class="flex flex-col gap-4 divide-y-4">
+                <div class="text-6xl font-semibold">Introduction and Background</div>
+                <div class="flex flex-col gap-4">
+                    <div class="text-2xl">
+                        The objective of our project is to whether the source of a photo is a human photographer or an AI agent. 
+                    </div>
+                    <div class="text-2xl">
+                        Modern research on the topic...
+                    </div>
+                    <div class="text-2xl">
+                        The dataset we have chosen is the <a class="font-bold hover:underline" href="https://genimage-dataset.github.io/" target="_blank">GenImage dataset</a>, created by researchers in Huawei's Noah's Ark Lab. It contains ~1M real and generated image pairs, produced by a variety of AI models and is intended for use in AI detection research. It uses the same classes as ImageNet, one of the most widely used datasets in CV research. 
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 divide-y-4">
+                <div class="text-6xl font-semibold">Problem Definition</div>
+                <div class="flex flex-col gap-4">
+                    <div class="text-2xl">
+                        Artificial intelligence is one of the hottest topics of the modern world. Many students, ourselves included, reply on services such as ChatGPT or GitHub Copilot to augment our capabilities as students, employees, and learners. When used appropriately, these tools are incredibly powerful; however, misuse is not just possible but widespread.
+                    </div>
+                    <div class="text-2xl ">
+                        We are rapidly approaching a point where AI generated content is indistinguishable from that created by a human. In the photography domain, this is particularly concerning. We think that photos are representative of human experience and emotions, in a way that is worth preserving. With this project we hope to determine, to a reasonable degree of accuracy, the source of an image, AI or human. The goal is not to inhibit or even look down on the incredible potential of AI tools, but to ensure that the human experience is not lost in the process.
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4 divide-y-4">
+                <div class="text-6xl font-semibold">Methods</div>
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-2">
+                        <div class="text-4xl font-semibold">Preprocessing</div>
+                        <div class="text-2xl">
+                            The following methods, typical of image classification research, have been chosen because they offer the following benefits:
+                            <ul class="list-disc px-8">
+                                <li><strong>Greyscale Conversion</strong> reduces the dimensionality of the dataset, making it computationally cheaper to work on.</li>
+                                <li><strong>Image Standardization</strong> scales pixel values of an image to a mean of 0 and a standard deviation of 1, ensuring that the model is not biased towards any particular pixel value.</li>
+                                <li><strong>Image Augmentation</strong> artificially increases the size of the dataset by applying random transformations to the images, allowing the model to learn from a wider variety of images without needing to find a larger dataset.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="text-4xl font-semibold">Modeling: </div>
+                        <div class="text-2xl">
+                            The folliwing methods have been identified as potential candidates for the classification model:
+                            <ul class="list-disc px-8">
+                                <li><strong>Convolutional Neural Networks</strong> are widely used in image classification and segmentation, which may prove helpful if AI generators leave unique artifacts a human may not.</li>
+                                <li><strong>Support Vector Machines</strong> are another candidate, goood at working with high-dimensional data such as images and are generally less prone to overfitting, helpful if we want our model to be truly general.</li>
+                                <li><strong>Generative Adversarial Networks</strong> may also be another option and might not require an AI generated dataset, as the discriminator in a GAN is trained to distinguish between the input and generated dataset.</li> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-4 divide-y-4">
+                <div class="text-6xl font-semibold">Results and Discussion</div>
+                <div class="text-2xl">
+                    Have some stuff - will finish tmrw morning :)
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-4 divide-y-4">
+                <div class="text-6xl font-semibold">References</div>
+                <div class="text-2xl">
+                    <Fragment set:html={"<div>I'll add more later, couldn't fix citation-js</div>"} />
+                </div>
+        </div>
+    </div>
+</Layout>
