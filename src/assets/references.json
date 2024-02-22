@@ -1,0 +1,191 @@
+[
+    {
+      "type": "article-journal",
+      "id": "jimaging9100199",
+      "author": [
+        {
+          "family": "Baraheem",
+          "given": "Samah S."
+        },
+        {
+          "family": "Nguyen",
+          "given": "Tam V."
+        }
+      ],
+      "title": "AI vs. AI: Can AI Detect AI-Generated Images?",
+      "container-title": "Journal of Imaging",
+      "volume": "9",
+      "issue": "10",
+      "issued": {
+        "date-parts": [
+          [2023]
+        ]
+      },
+      "page": "199",
+      "URL": "https://www.mdpi.com/2313-433X/9/10/199",
+      "PMID": "37888306",
+      "ISSN": "2313-433X",
+      "DOI": "10.3390/jimaging9100199"
+    },
+    {
+      "type": "paper-conference",
+      "id": "Epstein_2023_ICCV",
+      "author": [
+        {
+          "family": "Epstein",
+          "given": "David C."
+        },
+        {
+          "family": "Jain",
+          "given": "Ishan"
+        },
+        {
+          "family": "Wang",
+          "given": "Oliver"
+        },
+        {
+          "family": "Zhang",
+          "given": "Richard"
+        }
+      ],
+      "title": "Online Detection of AI-Generated Images",
+      "container-title": "Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops",
+      "issued": {
+        "date-parts": [
+          [2023, 10]
+        ]
+      },
+      "page": "382-392"
+    },
+    {
+      "type": "article-journal",
+      "id": "10103686",
+      "author": [
+        {
+          "family": "Göring",
+          "given": "Steve"
+        },
+        {
+          "family": "Ramachandra Rao",
+          "given": "Rakesh Rao"
+        },
+        {
+          "family": "Merten",
+          "given": "Rasmus"
+        },
+        {
+          "family": "Raake",
+          "given": "Alexander"
+        }
+      ],
+      "title": "Analysis of Appeal for Realistic AI-Generated Photos",
+      "container-title": "IEEE Access",
+      "volume": "11",
+      "issued": {
+        "date-parts": [
+          [2023]
+        ]
+      },
+      "page": "38999-39012",
+      "DOI": "10.1109/ACCESS.2023.3267968"
+    },
+    {
+      "type": "article",
+      "id": "zhu2023genimage",
+      "author": [
+        {
+          "family": "Zhu",
+          "given": "Mingjian"
+        },
+        {
+          "family": "Chen",
+          "given": "Hanting"
+        },
+        {
+          "family": "Yan",
+          "given": "Qiangyu"
+        },
+        {
+          "family": "Huang",
+          "given": "Xudong"
+        },
+        {
+          "family": "Lin",
+          "given": "Guanyu"
+        },
+        {
+          "family": "Li",
+          "given": "Wei"
+        },
+        {
+          "family": "Tu",
+          "given": "Zhijun"
+        },
+        {
+          "family": "Hu",
+          "given": "Hailin"
+        },
+        {
+          "family": "Hu",
+          "given": "Jie"
+        },
+        {
+          "family": "Wang",
+          "given": "Yunhe"
+        }
+      ],
+      "title": "GenImage: A Million-Scale Benchmark for Detecting AI-Generated Image",
+      "issued": {
+        "date-parts": [
+          [2023]
+        ]
+      },
+      "archive": "arXiv",
+      "archiveLocation": "2306.08571",
+      "primaryClass": "cs.CV"
+    },
+    {
+      "type": "article",
+      "id": "lu2023seeing",
+      "author": [
+        {
+          "family": "Lu",
+          "given": "Zeyu"
+        },
+        {
+          "family": "Huang",
+          "given": "Di"
+        },
+        {
+          "family": "Bai",
+          "given": "Lei"
+        },
+        {
+          "family": "Qu",
+          "given": "Jingjing"
+        },
+        {
+          "family": "Wu",
+          "given": "Chengyue"
+        },
+        {
+          "family": "Liu",
+          "given": "Xihui"
+        },
+        {
+          "family": "Ouyang",
+          "given": "Wanli"
+        }
+      ],
+      "title": "Seeing is not always believing: Benchmarking Human and Model Perception of AI-Generated Images",
+      "issued": {
+        "date-parts": [
+          [2023]
+        ]
+      },
+      "archive": "arXiv",
+      "archiveLocation": "2304.13023",
+      "primaryClass": "cs.AI"
+    }
+  ]
+  
