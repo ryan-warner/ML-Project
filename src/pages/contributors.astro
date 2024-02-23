@@ -1,4 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Cite from 'citation-js' 
+import references from '../assets/references.json'
+const cite = new Cite(references)
+let htmlRefs = cite.format('bibliography', {
+  format: 'html',
+  template: 'ieee',
+  lang: 'en-US',
+})
+
+import Layout from '../layouts/Layout.astro'
 ---
-<div class="font-sm">Testing if contributors page will update</div>
+<Layout>
+     <div class="text-2xl"> Contributors page update test</div>
+</Layout>
