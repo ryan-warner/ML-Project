@@ -10,11 +10,6 @@ let htmlRefs = cite.format('bibliography', {
   lang: 'en-US',
 })
 
-// Remove <div class="csl-bib-body">
-htmlRefs = htmlRefs.replace(/<div class="csl-bib-body">/g, '')
-// Remove LAST </div>
-htmlRefs = htmlRefs.replace(/<\/div>$/g, '')
-
 import Layout from '../layouts/Layout.astro'
 ---
 <Layout>
