@@ -12,9 +12,11 @@ import Footer from '../components/Footer.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>ML Project</title>
 	</head>
-	<body class="bg-light-primary">
-		<Header />
-		<slot />
+	<body class="bg-light-primary h-screen flex flex-col justify-between">
+		<div>
+			<Header />
+			<slot />
+		</div>
 		<Footer />
 	</body>
 </html>

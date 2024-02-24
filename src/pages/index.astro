@@ -8,21 +8,18 @@ import realImage from '../assets/real_splash.jpg';
 
 <Layout>
     <div class="w-full flex flex-col">
-      <div class="h-[66vh] flex gap-24">
-        <div id="typewriter" class="text-8xl w-[45%] font-semibold flex flex-col justify-center px-16 bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 text-transparent bg-clip-text">
+      <div class=" h-[66vh] flex flex-col gap-24 justify-center">
+        <div class="text-8xl w-[100%] font-semibold flex flex-col justify-center px-16 bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 text-transparent bg-clip-text">
           This picture does not exist.
         </div>
-        <div class="flex-1 w-full self-center flex justify-center items-center h-full">
-          <Image src={fakeImage} alt="AI Generated Image" class="h-4/5 w-min object-contain rounded-2xl overflow-hidden" />
+        <div class="text-6xl w-[100%] font-semibold flex flex-col justify-center px-16 bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 text-black bg-clip-text">
+          An exploration of AI generated imagery
         </div>
+        <!--<div class="flex-1 w-full self-center flex justify-center items-center h-full">
+          <Image src={fakeImage} alt="AI Generated Image" class="h-4/5 w-min object-contain rounded-2xl overflow-hidden" />
+        </div>-->
       </div>
-      <div class="text-6xl font-semibold">
-        But this one does. 
-      </div>
-      <div id="ty2pewriter" class="text-4xl">
-        Test!
-      </div>
-      <img id="dynamicImage" src={realImage.src} alt="Real Image" class="h-24 w-72 object-cover rounded-2xl overflow-hidden" />
+      <!--<img id="dynamicImage" src={realImage.src} alt="Real Image" class="h-24 w-72 object-cover rounded-2xl overflow-hidden" />-->
   </div>
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js">
     import Typewriter from 'typewriter-effect/dist/core';
