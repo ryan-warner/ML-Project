@@ -9,6 +9,6 @@ export default defineConfig({
   base: '/pages/rwarner31/ML-Project/',
   output: 'static',
   build: {
-    inlineStylesheets: 'always'
+    inlineStylesheets: 'never'
   }
 });
