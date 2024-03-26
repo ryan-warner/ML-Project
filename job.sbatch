@@ -9,6 +9,7 @@
 #SBATCH --mail-type=BEGIN,END,FAIL              # Mail preferences
 #SBATCH --mail-user=rwarner31@gatech.edu        # E-mail address for notifications
 #SBATCH --partition=coc-gpu
+#SBATCH --tmp=32G
 cd $SLURM_SUBMIT_DIR      
 
 module load anaconda3

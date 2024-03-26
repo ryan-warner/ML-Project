@@ -1,0 +1,108 @@
+---------------------------------------
+Begin Slurm Prolog: Mar-25-2024 23:35:52
+Job ID:    560277
+User ID:   rwarner31
+Account:   ae
+Job name:  MLProjectJob
+Partition: coc-gpu
+---------------------------------------
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda deactivate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+Traceback (most recent call last):
+  File "/storage/ice1/1/7/rwarner31/ML-Project/main.py", line 1, in <module>
+    from src.svm.model import preprocess_data, train_model, evaluate_model
+  File "/storage/ice1/1/7/rwarner31/ML-Project/src/__init__.py", line 3, in <module>
+    dataset = load_dataset("InfImagine/FakeImageDataset")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/site-packages/datasets/load.py", line 2582, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/site-packages/datasets/builder.py", line 985, in download_and_prepare
+    with incomplete_dir(self._output_dir) as tmp_output_dir:
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/site-packages/datasets/builder.py", line 957, in incomplete_dir
+    os.makedirs(tmp_dir, exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+OSError: [Errno 122] Disk quota exceeded: '/home/hice1/rwarner31/.cache/huggingface/datasets/InfImagine___fake_image_dataset/default/0.0.0/4edf8865bd54ae2acf4708b709b74b6086b61cba.incomplete'
+Traceback (most recent call last):
+  File "/storage/ice1/1/7/rwarner31/ML-Project/main.py", line 1, in <module>
+    from src.svm.model import preprocess_data, train_model, evaluate_model
+  File "/storage/ice1/1/7/rwarner31/ML-Project/src/__init__.py", line 3, in <module>
+    dataset = load_dataset("InfImagine/FakeImageDataset")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/site-packages/datasets/load.py", line 2582, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/site-packages/datasets/builder.py", line 985, in download_and_prepare
+    with incomplete_dir(self._output_dir) as tmp_output_dir:
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/contextlib.py", line 137, in __enter__
+Traceback (most recent call last):
+  File "/storage/ice1/1/7/rwarner31/ML-Project/main.py", line 1, in <module>
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/site-packages/datasets/builder.py", line 957, in incomplete_dir
+    from src.svm.model import preprocess_data, train_model, evaluate_model
+  File "/storage/ice1/1/7/rwarner31/ML-Project/src/__init__.py", line 3, in <module>
+    os.makedirs(tmp_dir, exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+OSError: [Errno 122] Disk quota exceeded: '/home/hice1/rwarner31/.cache/huggingface/datasets/InfImagine___fake_image_dataset/default/0.0.0/4edf8865bd54ae2acf4708b709b74b6086b61cba.incomplete'
+    dataset = load_dataset("InfImagine/FakeImageDataset")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/site-packages/datasets/load.py", line 2582, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/site-packages/datasets/builder.py", line 985, in download_and_prepare
+    with incomplete_dir(self._output_dir) as tmp_output_dir:
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/site-packages/datasets/builder.py", line 957, in incomplete_dir
+    os.makedirs(tmp_dir, exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+OSError: [Errno 122] Disk quota exceeded: '/home/hice1/rwarner31/.cache/huggingface/datasets/InfImagine___fake_image_dataset/default/0.0.0/4edf8865bd54ae2acf4708b709b74b6086b61cba.incomplete'
+Traceback (most recent call last):
+  File "/storage/ice1/1/7/rwarner31/ML-Project/main.py", line 1, in <module>
+    from src.svm.model import preprocess_data, train_model, evaluate_model
+  File "/storage/ice1/1/7/rwarner31/ML-Project/src/__init__.py", line 3, in <module>
+    dataset = load_dataset("InfImagine/FakeImageDataset")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/site-packages/datasets/load.py", line 2582, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/site-packages/datasets/builder.py", line 985, in download_and_prepare
+    with incomplete_dir(self._output_dir) as tmp_output_dir:
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/hice1/rwarner31/.conda/envs/ML-Project/lib/python3.11/site-packages/datasets/builder.py", line 957, in incomplete_dir
+    os.makedirs(tmp_dir, exist_ok=True)
+  File "<frozen os>", line 225, in makedirs
+OSError: [Errno 122] Disk quota exceeded: '/home/hice1/rwarner31/.cache/huggingface/datasets/InfImagine___fake_image_dataset/default/0.0.0/4edf8865bd54ae2acf4708b709b74b6086b61cba.incomplete'
+srun: error: atl1-1-02-009-31-0: tasks 0-3: Exited with exit code 1
+---------------------------------------
+Begin Slurm Epilog: Mar-25-2024 23:36:16
+Job ID:        560277
+Array Job ID:  _4294967294
+User ID:       rwarner31
+Account:       ae
+Job name:      MLProjectJob
+Resources:     cpu=4,gres/gpu:v100=1,mem=4G,node=1
+Rsrc Used:     cput=00:01:32,vmem=2328K,walltime=00:00:23,mem=0,energy_used=0
+Partition:     coc-gpu
+Nodes:         atl1-1-02-009-31-0
+---------------------------------------
