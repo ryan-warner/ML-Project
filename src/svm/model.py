@@ -38,3 +38,10 @@ def evaluate_model(classifier, X_test, y_test):
     print(confusion_matrix(y_test, y_pred))
     print(classification_report(y_test, y_pred))
     print("Accuracy:", accuracy_score(y_test, y_pred))
+
+    # Save Evaluation Metrics to individual files
+    np.savetxt('confusion_matrix.txt', confusion_matrix(y_test, y_pred), fmt='%d')
+    with open('classification_report.txt', 'w') as f:
+        f.write(classification_report(y_test, y_pred))
+    with open('accuracy.txt', 'w') as f:
+        f.write(str(accuracy_score(y_test, y_pred)))
