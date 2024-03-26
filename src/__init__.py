@@ -1,3 +1,3 @@
 from datasets import load_dataset
 
-dataset = load_dataset("InfImagine/FakeImageDataset", streaming=True, data_dir="/scratch")
+dataset = load_dataset("InfImagine/FakeImageDataset", data_dir="/scratch")
