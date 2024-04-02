@@ -29,7 +29,7 @@ def model_iterative():
 
 
 
-def preprocessing(images):
+def preprocessing(images, agument=True):
     # Batch image preprocessing on the fly
     # Get images from url paths, resize, and extract features
 
@@ -48,7 +48,7 @@ def preprocessing(images):
         # Augment
         # Rotate
         rotated = np.rot90(image)
-        features = np.vstack((features, rotated.flatten()))
+        #features = np.vstack((features, rotated.flatten()))
         # Flip
         flipped = np.flip(image)
         features = np.vstack((features, flipped.flatten()))
@@ -109,7 +109,7 @@ def partial_train(preprocess_function, real_ds, fake_ds, batch_size):
 
 def validate(model, real_ds, fake_ds, preprocess_function):
     for batch, batch_labels in batch_iterator(real_ds, fake_ds, batch_size=1000, batch_limit=1):
-        features = preprocess_function(batch)
+        features = preprocess_function(batch, agument=False)
 
         # Standardize features
         scaler = StandardScaler().fit(features)
