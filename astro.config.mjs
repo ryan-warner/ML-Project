@@ -6,7 +6,7 @@ export default defineConfig({
   outDir: './docs',
   integrations: [tailwind()],
   site: 'https://github.gatech.edu',
-  base: '/pages/ML-Project/',
+  base: '/pages/rwarner31/ML-ProjectV2/',
   output: 'static',
   build: {
     inlineStylesheets: 'never'
