@@ -91,59 +91,33 @@
     },
     {
       "type": "article",
-      "id": "zhu2023genimage",
+      "id": "google",
       "author": [
         {
-          "family": "Zhu",
-          "given": "Mingjian"
+          "family": "Sharma",
+          "given": "Piyush"
         },
         {
-          "family": "Chen",
-          "given": "Hanting"
+          "family": "Ding",
+          "given": "Nan"
         },
         {
-          "family": "Yan",
-          "given": "Qiangyu"
+          "family": "Goodman",
+          "given": "Sebastian"
         },
         {
-          "family": "Huang",
-          "given": "Xudong"
-        },
-        {
-          "family": "Lin",
-          "given": "Guanyu"
-        },
-        {
-          "family": "Li",
-          "given": "Wei"
-        },
-        {
-          "family": "Tu",
-          "given": "Zhijun"
-        },
-        {
-          "family": "Hu",
-          "given": "Hailin"
-        },
-        {
-          "family": "Hu",
-          "given": "Jie"
-        },
-        {
-          "family": "Wang",
-          "given": "Yunhe"
+          "family": "Soricut",
+          "given": "Radu"
         }
       ],
-      "title": "GenImage: A Million-Scale Benchmark for Detecting AI-Generated Image",
+      "title": "Conceptual Captions: A Cleaned, Hypernymed, Image Alt-text Dataset For Automatic Image Captioning",
       "issued": {
         "date-parts": [
-          [2023]
+          [2018]
         ]
-      },
-      "archive": "arXiv",
-      "archiveLocation": "2306.08571",
-      "primaryClass": "cs.CV"
+      }
     },
+    
     {
       "type": "article",
       "id": "lu2023seeing",
@@ -186,6 +160,46 @@
       "archive": "arXiv",
       "archiveLocation": "2304.13023",
       "primaryClass": "cs.AI"
+    },
+    {
+      "type": "article",
+      "id": "sentry-image-leaderboard",
+      "author": [
+        {
+          "family": "Lu",
+          "given": "Zeyu"
+        },
+        {
+          "family": "Huang",
+          "given": "Di"
+        },
+        {
+          "family": "Zhang",
+          "given": "Chunli"
+        },
+        {
+          "family": "Wu",
+          "given": "Chengyue"
+        },
+        {
+          "family": "Liu",
+          "given": "Xihui"
+        },
+        {
+          "family": "Bai",
+          "given": "Lei"
+        },
+        {
+          "family": "Ouyang",
+          "given": "Wanli"
+        }
+      ],
+      "title": "Sentry-Image Leaderboard",
+      "issued": {
+        "date-parts": [
+          [2023]
+        ]
+      }
     }
   ]
   
