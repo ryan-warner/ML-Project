@@ -22,7 +22,7 @@ class RealDataset():
         response = None
         while response == None:
             try:
-                response = requests.get(result, timeout=5)
+                response = requests.get(result, timeout=0.5)
                 if response.status_code != 200:
                     response = None
                     result = next(self.iterator)
