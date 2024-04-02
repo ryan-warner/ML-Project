@@ -39,26 +39,25 @@ def preprocessing(images):
         image = image.resize((128, 128))
         image = ImageOps.grayscale(image)
         image = np.array(image)
-        
-        image = image.flatten()
+
         if features.size == 0:
             features = image
         else:
-            features = np.vstack((features, image))
+            features = np.vstack((features, image.flatten()))
 
         # Augment
         # Rotate
         rotated = np.rot90(image)
-        features = np.vstack((features, rotated))
+        features = np.vstack((features, rotated.flatten()))
         # Flip
         flipped = np.flip(image)
-        features = np.vstack((features, flipped))
+        features = np.vstack((features, flipped.flatten()))
         # rotate 180
         rotated180 = np.rot90(rotated)
-        features = np.vstack((features, rotated180))
+        features = np.vstack((features, rotated180.flatten()))
         # Flip vertical
         flipped_vertical = np.flipud(image)
-        features = np.vstack((features, flipped_vertical))
+        features = np.vstack((features, flipped_vertical.flatten()))
 
 
     return features
