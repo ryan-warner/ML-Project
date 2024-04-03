@@ -112,7 +112,7 @@ for epoch in range(opt.n_epochs):
     i = 0
     for link, fake_imgss in zip(dataset_realTrainList_limited, dataset_fakeTrain):
         print(i)
-        print(link)
+        #print(link)
         try:
             img_response = requests.get(link, stream = True)
             img_response.raise_for_status()
@@ -172,7 +172,7 @@ for epoch in range(opt.n_epochs):
 
         d_loss.backward()
         optimizer_D.step()
-        print("meef")
+
         print(
             "[Epoch %d/%d] [Batch %d/%d] [D loss: %f] [G loss: %f]"
             % (epoch, opt.n_epochs, i, len(dataset_realTrainList_limited), d_loss.item(), g_loss.item())
@@ -200,7 +200,7 @@ for epoch in range(opt.n_epochs):
         d_loss_D2.backward()
         optimizer_D2.step()
 
-        print(link)
+        #print(link)
         i += 1
         if i > lenWant:
             break
