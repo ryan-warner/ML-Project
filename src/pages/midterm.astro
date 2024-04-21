@@ -50,18 +50,22 @@ import Layout from '../layouts/Layout.astro'
                     <div class="flex flex-col gap-2">
                         <div class="text-4xl font-semibold">Preprocessing</div>
                         <div class="text-2xl">
-                            We chose image augmentation it suits the dilemma we faced while implementing our model, as discussed below: 
+                            We were able to implement all preprocessing methods discussed in the proposal while implementing our model, as discussed below: 
                             <ul class="list-disc px-8">
-                                <li><strong>Image Augmentation</strong> artificially increases the size of the dataset by applying random transformations to the images, allowing the model to learn from a wider variety of images without needing to find a larger dataset. We currently face the dilemma of 20k samples. Also due to storage limitations, we have to stream the data, which takes longer than directly through local</li>
+                                <li><strong>Image Augmentation</strong> Artificially increases the size of the dataset by applying random transformations to the images, allowing the model to learn from a wider variety of images without needing to find a larger dataset. Also due to storage limitations, we have to stream the data, so the ability to augment the dataset in memory as we stream images is incredibly helpful, and should increase the overall accuracy of the classifier.</li>
+                                <li><strong>Grayscale Conversion</strong> This has proved to be incredibly helpful in our implementation, significantly reducing the number of features in our dataset by collapsing RGB images to flat arrays.</li>
+                                <li><strong>Image Standardization</strong> Generally a good best practice, we utilized Scikit-Learn's StandardScaler utility to scale our data to 0-mean and unit variance. </li>
                             </ul>
                         </div>
                     </div>
                     <div class="flex flex-col gap-2">
                         <div class="text-4xl font-semibold">Modeling: </div>
                         <div class="text-2xl">
-                            We implemented SVM for the classification model because we thought it is well-suited for bias-variance tradeoff which comes when the model is complicated, such is the case for image classification:
+                            We implemented a SVM for the initial classification model because we thought it is well-suited for bias-variance tradeoff which comes when the model is complicated, such is the case for image classification:
                             <ul class="list-disc px-8">
                                 <li><strong>Support Vector Machines</strong> good at working with high-dimensional data such as images and are generally less prone to overfitting, helpful if we want our model to be truly general.</li>
+                            </ul>
+                        We also ran with the SVM for the midterm checkpoint because most of our time was spend adapting our dataset to the constraints of our laptops and that of the ICE, which we discuss later on in this page. Other models are nearly ready, but the largest challenges we've faced have been simply working with a dataset of this size and scale of features in a way that is reasonable and efficient.
                         </div>
                     </div>
                 </div>
@@ -72,6 +76,36 @@ import Layout from '../layouts/Layout.astro'
                 <div class="text-3xl font-semibold">Confusion Matrix</div>
                 <img src="/pages/rwarner31/ML-Project/assets/ProjResults.png" alt="Confusion Matrix" class="w-fuk=ll h-auto" />
                 <div class="text-2xl">We implemented SVM and visualized our results via the classification report, confusion matrix, and accuracy scores above. Our quantitative scoring metrics are:<strong> accuracy, precision, and recall.</strong> Accuracy of at least 0.9 in distinguishing between AI and human generated images. Accuracy is a good general metric to quantify model performance as it calculates correct predicitions out of total ground truth (labels). Precision of at least 0.9 to show how good the ground truths are represented via true positives out of total ground truth. Recall of at least 0.8 to measure completeness and how well ground truth is recovered via true positive out of actual results; we care that the model is able to correctly identify AI generated images (true positive), but a little less if it mislabels a human generated image as AI (false negative). Project success is additionally quantified by a <strong>f1-score</strong> score of at least 0.8 as it measures precision and completeness.<div class="text-2xl">From our visualization, all of our quantitative scoring metrics and inherent goals were not met. Our predictions were not precise, did not recover the ground truth well, and was not accurate to our standards; it was unable to effectively identify AI generated images from real images. Our model performed poorly because our sample size were small and SVM needs a large sample to train well. Our next steps are using PACE environment, which has more computation power fixing GPU limitations, to run more iterations and on more samples to fix the underfitting problem. 
+                <div>
+                    <div class="text-3xl font-semibold">Confusion Matrix for a 1k Testing Set</div>
+                    <!-- <img src="/pages/rwarner31/ML-Project/assets/ProjResults.png" alt="Confusion Matrix" class="w-fuk=ll h-auto" /> -->
+                    <div class="w-full flex justify-center">
+                        <div class="p-4 w-1/2">
+                            <img src="/pages/rwarner31/ML-Project/assets/confusion.png" alt="Confusion Matrix" class="w-full h-auto" />
+                            <!-- <div class="grid grid-cols-4 grid-flow-row">
+                                <div class="col-span-1"></div>
+                                <div class="col-span-1"></div>
+                                <div class="col-span-2 flex justify-center text-2xl">Actual</div>
+                                <div class="col-span-1"></div>
+                                <div class="col-span-1"></div>
+                                <div class="text-2xl flex justify-center">Positive</div>
+                                <div class="text-2xl flex justify-center">Negative</div>
+                                <div style={{"writing-mode": 'vertical-rl'}} class="row-span-3 text-2xl rotate-180">Predicted</div>
+                                <div class="text-2xl">Positive</div>
+                                <div class="border-t-4 border-l-4 border-r-2 border-b-2 border-black flex justify-center text-xl">560</div>
+                                <div class="border-t-4 border-r-4 border-l-2 border-b-2 border-black flex justify-center text-xl">440</div>
+                                <div class="text-2xl">Negative</div>
+                                <div class="border-b-4 border-l-4 border-r-2 border-t-2 border-black flex justify-center text-xl">454</div>
+                                <div class="border-b-4 border-r-4 border-l-2 border-t-2 border-black flex justify-center text-xl">546</div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="text-2xl">We implemented SVM and visualized our results in the confusion matrix above. Our quantitative scoring metrics are:<strong> accuracy, precision, and recall.</strong> Accuracy of at least 0.9 in distinguishing between AI and human generated images. Accuracy is a good general metric to quantify model performance as it calculates correct predicitions out of total ground truth (labels). Precision of at least 0.9 to show how good the ground truths are represented via true positives out of total ground truth. Recall of at least 0.8 to measure completeness and how well ground truth is recovered via true positive out of actual results; we care that the model is able to correctly identify AI generated images (true positive), but a little less if it mislabels a human generated image as AI (false negative). Project success is additionally quantified by a <strong>f1-score</strong> of at least 0.8 as it measures precision and completeness.<div class="text-2xl"></div>
+            
+                </br>From our visualization (confusion matrix), all of our quantitative scoring metrics and inherent goals were not met. Our model has an accuracy of <strong>0.553</strong>, with an f1 score in classifying real images of <strong>0.55</strong>, and a score of <strong>0.56</strong> in classifying fake images. Compared to the "success" metrics above, our model is well short of the mark. Our predictions were not precise, did not recover the ground truth well, and was not accurate to our standards; it was unable to effectively identify AI generated images from real images. Our model performed poorly because our sample size were small and SVM needs a large sample to train well. That said, it is possible that what we are seeing is to be expected of a support vector machine. Since we are using image data, our dataset is quite large, and even on ICE, unable to be downloaded in its entirety. Because of this, we have been forced to adapt our approach and stream the dataset, which greatly affects the runtime and performance of our model. To prevent loading everything into memory, a SGD classifier, which exhibits behavior incredibly similar to that of an SVM was used since it allows us to partially fit the model with smaller batches of data. With these necessities in mind, we have only trained the model so far on 20k records, a relatively small dataset on the scale of what is required for an accurate model. On the other hand, since SVMs are generally fairly resiliant against overfitting, the model may simply be undertrained, again, given the size of the dataset. Other models, such as the CNN, which we are currently in the process of implementing, do not exhibit the same overfitting tendencies, so we hope to see improved resuts, even with this smaller dataset. 
+
+            </br></br> The CNN and GAN implementations are mostly complete. What remains is to connect these to the dataset classes developed on the SVM implementation and train them on the ICE cluster. We are working to parallelize the data streaming process to better utilize the available computational resources and allow us to train these models on a much larger dataset. We will continue to monitor the performance of our models, and hope to see improved results in the coming days and weeks.
 </div></div>
 
             <div class="flex flex-col gap-4 divide-y-4">
