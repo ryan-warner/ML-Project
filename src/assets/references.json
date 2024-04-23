@@ -200,6 +200,26 @@
           [2023]
         ]
       }
+    },
+    {
+      "type": "article",
+      "id": "cifake",
+      "author": [
+        {
+          "family": "Bird",
+          "given": "Jordan"
+        },
+        {
+          "family": "Lotfi",
+          "given": "Ahmad"
+        }
+      ],
+      "title": "CIFAKE: Image Classification and Explainable Identification of AI-Generated Synthetic Images",
+      "issued": {
+        "date-parts": [
+          [2024]
+        ]
+      }
     }
   ]
   
