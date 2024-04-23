@@ -220,10 +220,12 @@ class CustomImageDataset(Dataset):
         return len(self.labels)
 
     def __getitem__(self, idx):
-        image = self.images[idx]
+        image = Image.fromarray(self.images[idx])  # Convert NumPy to PIL Image
         label = self.labels[idx]
+
         if self.transform:
             image = self.transform(image)
+
         return image, label
     def __call__(self, idx=None, transform=None):
         if idx:
