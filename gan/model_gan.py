@@ -8,7 +8,6 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 import sys
 import os
 #from src import logger
-print(os.path.isdir("./cifakedata/"))
 # Pytorch and Torchvision Imports
 import torch
 import torch.nn as nn
@@ -30,8 +29,10 @@ from torchgan.trainer import Trainer
 #help(torchvision.utils.make_grid)
 # Define data path
 
-
-cuda_epochs = 20
+step_channels_all = 32
+lr1 = 0.0001
+lr2 = 0.0003
+cuda_epochs = 25
 minimax_losses = [MinimaxGeneratorLoss(), MinimaxDiscriminatorLoss()]
 wgangp_losses = [
     WassersteinGeneratorLoss(),
@@ -47,28 +48,27 @@ cgan_network = {
                 "encoding_dims": 100,
                 "num_classes": 2,  # Data is either real or fake
                 "out_channels": 3, #RGB
-                "step_channels": 16,
+                "step_channels": step_channels_all,
                 "nonlinearity": nn.LeakyReLU(0.2),
                 "last_nonlinearity": nn.Tanh(),
             },
-            "optimizer": {"name": Adam, "args": {"lr": 0.0001, "betas": (0.5, 0.999)}},
+            "optimizer": {"name": Adam, "args": {"lr": lr1, "betas": (0.5, 0.999)}},
         },
         "discriminator": {
             "name": ConditionalGANDiscriminator,
             "args": {
                 "num_classes": 2, 
                 "in_channels": 3, #RGB
-                "step_channels": 16,
+                "step_channels": step_channels_all,
                 "nonlinearity": nn.LeakyReLU(0.2),
                 "last_nonlinearity": nn.Tanh(),
             },
-            "optimizer": {"name": Adam, "args": {"lr": 0.0003, "betas": (0.5, 0.999)}},
+            "optimizer": {"name": Adam, "args": {"lr": lr2, "betas": (0.5, 0.999)}},
         },
     }
 def model():
-    #print("model start")
     # Create CIFAKE dataset
-    data_path = "./cifakedata/train"
+    data_path = "/storage/ice1/9/1/rravikanti3/cifakedata/train"
     cifake_dataset = datasets.ImageFolder(root=data_path, transform=transforms.Compose(
         [
             #transforms.Resize((32, 32)),
@@ -78,8 +78,6 @@ def model():
     ))
     # Create dataloader
     dataloader = DataLoader(cifake_dataset, batch_size=64, shuffle=True)
-    print("data loaded")
-    #print("torch check")
     if torch.cuda.is_available():
         device = torch.device("cuda:0")
         # Use deterministic cudnn algorithms
@@ -87,7 +85,7 @@ def model():
         epochs = cuda_epochs
     else:
         device = torch.device("cpu")
-        epochs = 1
+        epochs = 2
 
     print("Device: {}".format(device))
     print("Epochs: {}".format(epochs))
@@ -95,7 +93,6 @@ def model():
         cgan_network, lsgan_losses, sample_size=64, epochs=epochs, device=device
     )
     trainer_cgan(dataloader)
-    #print("training complete check")
 
     # Grab a batch of real images from the dataloader
     real_batch = next(iter(dataloader))
@@ -130,7 +127,7 @@ def model():
     total_accuracy = 0
     num_batches = 0
 
-    data_path_test = "./cifakedata/test"
+    data_path_test = "/storage/ice1/9/1/rravikanti3/cifakedata/test"
 
     cifake_dataset_test = datasets.ImageFolder(root=data_path_test, transform=transforms.Compose(
         [
@@ -140,12 +137,10 @@ def model():
         ]
     ))
     # Create dataloader
-    print("train complete")
-    dataloaderNew = DataLoader(cifake_dataset_test, batch_size=100, shuffle=True)
-    print("test data loading complete complete")
+    dataloaderNew = DataLoader(cifake_dataset_test, batch_size=3000, shuffle=True)
+    print("test data loading complete")
     # Iterate through the dataloader
     for real_batch, labels in dataloaderNew:
-        print("batch testing next start")
         # Test the batch and accumulate accuracy
         accuracy, confusion = test_batch(trainedGAN, real_batch, labels)
         total_accuracy += accuracy
