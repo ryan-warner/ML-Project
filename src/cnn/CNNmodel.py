@@ -50,6 +50,11 @@ test_datagen = ImageDataGenerator(rescale=1./255)
 train_set = train_datagen.flow_from_directory('dataset/train', target_size=(64,64), batch_size = 32, class_mode = 'binary')
 test_set = test_datagen.flow_from_directory('dataset/test', target_size=(64,64), batch_size = 32, class_mode = 'binary')
 
-classifier.fit(train_set, epochs=1, steps_per_epoch=8000)
+classifier.fit(train_set, 
+              epochs=5,
+              steps_per_epoch=100000,
+              validation_data=(test_set), 
+              validation_steps=20000
+              )
 
 result = classifier.predict(test_set)
