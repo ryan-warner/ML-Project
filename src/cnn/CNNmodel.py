@@ -31,9 +31,9 @@ classifier.add(MaxPooling2D(pool_size = (2,2)))
 
 classifier.add(Flatten())
 
-classifier.add(Dense(100, activation ='relu'))
+classifier.add(Dense(128, activation ='relu'))
 
-classifier.add(Dense(1, activation= 'softmax'))
+classifier.add(Dense(1, activation= 'sigmoid'))
 
 classifier.compile(optimizer='adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
 
@@ -46,9 +46,9 @@ test_set = test_datagen.flow_from_directory('dataset/test', target_size=(64,64),
 
 classifier.fit(train_set, 
               epochs=5,
-              steps_per_epoch=100000,
+              steps_per_epoch=3125,
               validation_data=(test_set), 
-              validation_steps=20000
+              validation_steps=625
               )
 
 result = classifier.predict(test_set)
