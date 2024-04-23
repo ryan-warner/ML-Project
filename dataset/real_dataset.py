@@ -1,7 +1,11 @@
 from PIL import Image
 import requests
 from io import BytesIO
+<<<<<<< HEAD
 from src import logger
+=======
+#from src import logger
+>>>>>>> Weiting/CNN
 
 class RealDataset():
     df = None

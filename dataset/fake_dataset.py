@@ -1,7 +1,11 @@
 import datasets
 from huggingface_hub import hf_hub_download
 import os
+<<<<<<< HEAD
 from src import logger
+=======
+#from src import logger
+>>>>>>> Weiting/CNN
 
 class FakeDataset():
     current_tarball = None

@@ -20,12 +20,6 @@ from keras.layers import MaxPooling2D
 from keras.layers import Flatten
 from keras.layers import Dense
 
-# (X_train, y_train), (X_test, y_test)
-
-# # Scale the data
-# X_train = X_train / 255.0
-# X_test = X_test / 255.0
-
 classifier = Sequential()
 
 classifier.add(Convolution2D(32,3,3,input_shape = (64,64,3), activation='relu'))
