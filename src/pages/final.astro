@@ -139,7 +139,7 @@ import Layout from '../layouts/Layout.astro'
                         </div>
                     </div>
                     <br></br>
-                    GAN uses a generator and a discriminator at the same time. The discriminator's purpose is to differentiate the real and fake images, and it can adapt to the generator's increasingly more realistic images. However, our GAN model performed very poorly, having poor precision and recall, and is wrong more times than right, as observed from the confusion matrix with the false positives and false negatives.
+                    GAN uses a generator and a discriminator at the same time. The discriminator's purpose is to differentiate the real and fake images, and it can adapt to the generator's increasingly more realistic images. We implemented a conditional GAN from TorchGan and the classification was carried out with a DCGAN discriminator. However, our GAN model performed very poorly, having poor precision and recall, and is wrong more times than right, as observed from the confusion matrix with the false positives and false negatives.
                     <br></br>
                     <div class="text-3xl font-semibold">GAN Confusion Matrix</div>
                     <div class="w-full flex justify-center">
