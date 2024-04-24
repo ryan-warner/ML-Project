@@ -123,23 +123,21 @@ import Layout from '../layouts/Layout.astro'
                 <div>
                     <div class="text-3xl font-semibold">GAN Metrics</div>
                     <div class="inline-block justify-center">
-                        <div class="p-4 w-100">
-                            <img src="/pages/rwarner31/ML-Project/assets/gan1.png" alt="GAN metrics" class="w-full h-auto" style="max-height: 3000px; max-width: 5000px;" />
+                        <div class="p-4 w-9/10">
+                            <img src="/pages/rwarner31/ML-Project/assets/gan1.png" alt="GAN metrics" class="w-full h-auto" style="max-height: 500; max-width: 500px;" />
                         </div>
                     </div>
                     <div class="inline-block justify-center">
-                        <div class="p-4 w-100">
-                            <img src="/pages/rwarner31/ML-Project/assets/gan2.png" alt="GAN metrics" class="w-full h-auto" style="max-height: 3000px; max-width: 5000px;" />
+                        <div class="p-4 w-9/10">
+                            <img src="/pages/rwarner31/ML-Project/assets/gan2.png" alt="GAN metrics" class="w-full h-auto" style="max-height: 500px; max-width: 500px;" />
                         </div>
                     </div>
 
                     <div class="inline-block justify-center">
-                        <div class="p-4 w-100">
-                            <img src="/pages/rwarner31/ML-Project/assets/gan3.png" alt="GAN metrics" class="w-full h-auto" style="max-height: 3000px; max-width: 5000px;" />
+                        <div class="p-4 w-9/10">
+                            <img src="/pages/rwarner31/ML-Project/assets/gan3.png" alt="GAN metrics" class="w-full h-auto" style="max-height: 500px; max-width: 500px;" />
                         </div>
                     </div>
-                    <br></br>
-                    GAN uses a generator and a discriminator at the same time. The discriminator's purpose is to differentiate the real and fake images, and it can adapt to the generator's increasingly more realistic images. We implemented a conditional GAN from TorchGan and the classification was carried out with a DCGAN discriminator. However, our GAN model performed very poorly, having poor precision and recall, and is wrong more times than right, as observed from the confusion matrix with the false positives and false negatives.
                     <br></br>
                     <div class="text-3xl font-semibold">GAN Confusion Matrix</div>
                     <div class="w-full flex justify-center">
@@ -147,6 +145,7 @@ import Layout from '../layouts/Layout.astro'
                             <img src="/pages/rwarner31/ML-Project/assets/CONFUSION_GAN.png" alt="Confusion Matrix" class="w-full h-auto" />
                         </div>
                     </div>
+                    GAN uses a generator and a discriminator at the same time. The discriminator's purpose is to differentiate the real and fake images, and it can adapt to the generator's increasingly more realistic images. We implemented a conditional GAN from TorchGan and the classification was carried out with a DCGAN discriminator. However, our GAN model performed very poorly, having poor precision and recall, and is wrong more times than right, as observed from the confusion matrix with the false positives and false negatives.
                 </div>
             </div></div>
             <br></br>
