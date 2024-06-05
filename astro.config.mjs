@@ -4,5 +4,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  base: '/ML-Project/',
+  site: 'https://ryan-warner.github.io',
+  base: 'ML-Project',
 });
