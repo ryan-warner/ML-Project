@@ -76,14 +76,14 @@ import Layout from '../layouts/Layout.astro'
                 <div class="text-2xl">Our quantitative scoring metrics are:<strong> accuracy, precision, and recall.</strong> Accuracy of at least 0.9 in distinguishing between AI and human generated images. Accuracy is a good general metric to quantify model performance as it calculates correct predicitions out of total ground truth (labels). Precision of at least 0.9 to show how good the ground truths are represented via true positives out of total ground truth. Recall of at least 0.8 to measure completeness and how well ground truth is recovered via true positive out of actual results; we care that the model is able to correctly identify AI generated images (true positive), but a little less if it mislabels a human generated image as AI (false negative). Project success is additionally quantified by a <strong>f1-score</strong> of at least 0.8 as it measures precision and completeness.<div class="text-2xl"></div>
                 <br></br>
                 <div class="text-3xl font-semibold">SVM Metrics</div>
-                <img src="/pages/rwarner31/ML-Project/assets/ProjResults.png" alt="Confusion Matrix" class="w-fuk=ll h-auto" />
+                <img src="/ML-Project/assets/ProjResults.png" alt="Confusion Matrix" class="w-fuk=ll h-auto" />
                 <div class="text-2xl">We implemented SVM and visualized our results via the classification report, confusion matrix, and accuracy scores above.
                 <div>
                     <br></br>
                     <div class="text-3xl font-semibold">Confusion Matrix for a 1k Testing Set</div>
                     <div class="w-full flex justify-center">
                         <div class="p-4 w-1/2">
-                            <img src="/pages/rwarner31/ML-Project/assets/CONFUSION_SVM.png" alt="Confusion Matrix" class="w-full h-auto" />
+                            <img src="/ML-Project/assets/CONFUSION_SVM.png" alt="Confusion Matrix" class="w-full h-auto" />
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ import Layout from '../layouts/Layout.astro'
                     <div class="text-3xl font-semibold">CNN Metrics</div>
                     <div class="w-full flex justify-center">
                         <div class="p-4 w-9/10">
-                            <img src="/pages/rwarner31/ML-Project/assets/cnnPlots.png" alt="CNN metrics" class="w-full h-auto" style="max-height: 3000px; max-width: 5000px;" />
+                            <img src="/ML-Project/assets/cnnPlots.png" alt="CNN metrics" class="w-full h-auto" style="max-height: 3000px; max-width: 5000px;" />
                         </div>
                     </div>
                     Our CNN metrics inform us about the both the training and validation data's loss, accuracy, precision, and recall over about 14 epochs. The loss tells us about the difference in our predicted outputs versus the actual values. The lower the loss value is, the closer our predictions are to the actual target value. Thus as our model becomes more accurate, the loss decreases. Viewing the accuracy plot to the right of the loss function, the accuracy changes accordingly. Since our CNN model performed with a high accuracy, the loss decreases. The validation set follows the trend of the training set. The precision represents the degree of purity the model displays. In our visualization, the mode's precision gradually increases as the clusters better represent the ground truth.
@@ -105,12 +105,12 @@ import Layout from '../layouts/Layout.astro'
                     <div class="text-3xl font-semibold">CNN Confusion Matrix</div>
                     <div class="w-full flex justify-center">
                         <div class="p-4 w-9/10">
-                            <img src="/pages/rwarner31/ML-Project/assets/confusioncnn.png" alt="CNN metrics" class="w-fuk=ll h-auto" style="max-height: 1000px; max-width: 600px;" />
+                            <img src="/ML-Project/assets/confusioncnn.png" alt="CNN metrics" class="w-fuk=ll h-auto" style="max-height: 1000px; max-width: 600px;" />
                         </div>
                     </div>
                     <div class="w-full flex justify-center">
                         <div class="p-4 w-9/10">
-                            <img src="/pages/rwarner31/ML-Project/assets/cnnStats.png" alt="CNN metrics" class="w-full h-auto" style="max-height: 5000px; max-width: 5000px;" />
+                            <img src="/ML-Project/assets/cnnStats.png" alt="CNN metrics" class="w-full h-auto" style="max-height: 5000px; max-width: 5000px;" />
                         </div>
                     </div>
                     The confusion matrix displays a high true positive and high true negative. Therefore, analyzing the confusion matrix we can see that the precision of our model is very high, with there only being a minimal amount of false positives. Additionally, the recall is high because there isn't a significant amount of false negatives.
@@ -124,25 +124,25 @@ import Layout from '../layouts/Layout.astro'
                     <div class="text-3xl font-semibold">GAN Metrics</div>
                     <div class="inline-block justify-center">
                         <div class="p-4 w-9/10">
-                            <img src="/pages/rwarner31/ML-Project/assets/gan1.png" alt="GAN metrics" class="w-full h-auto" style="max-height: 500; max-width: 500px;" />
+                            <img src="/ML-Project/assets/gan1.png" alt="GAN metrics" class="w-full h-auto" style="max-height: 500; max-width: 500px;" />
                         </div>
                     </div>
                     <div class="inline-block justify-center">
                         <div class="p-4 w-9/10">
-                            <img src="/pages/rwarner31/ML-Project/assets/gan2.png" alt="GAN metrics" class="w-full h-auto" style="max-height: 500px; max-width: 500px;" />
+                            <img src="/ML-Project/assets/gan2.png" alt="GAN metrics" class="w-full h-auto" style="max-height: 500px; max-width: 500px;" />
                         </div>
                     </div>
 
                     <div class="inline-block justify-center">
                         <div class="p-4 w-9/10">
-                            <img src="/pages/rwarner31/ML-Project/assets/gan3.png" alt="GAN metrics" class="w-full h-auto" style="max-height: 500px; max-width: 500px;" />
+                            <img src="/ML-Project/assets/gan3.png" alt="GAN metrics" class="w-full h-auto" style="max-height: 500px; max-width: 500px;" />
                         </div>
                     </div>
                     <br></br>
                     <div class="text-3xl font-semibold">GAN Confusion Matrix</div>
                     <div class="w-full flex justify-center">
                         <div class="p-4 w-1/2">
-                            <img src="/pages/rwarner31/ML-Project/assets/CONFUSION_GAN.png" alt="Confusion Matrix" class="w-full h-auto" />
+                            <img src="/ML-Project/assets/CONFUSION_GAN.png" alt="Confusion Matrix" class="w-full h-auto" />
                         </div>
                     </div>
                     GAN uses a generator and a discriminator at the same time. The discriminator's purpose is to differentiate the real and fake images, and it can adapt to the generator's increasingly more realistic images. We implemented a conditional GAN from TorchGan and the classification was carried out with a DCGAN discriminator. However, our GAN model performed very poorly, having poor precision and recall, and is wrong more times than right, as observed from the confusion matrix with the false positives and false negatives.
@@ -168,7 +168,7 @@ import Layout from '../layouts/Layout.astro'
 
             <div class="flex flex-col gap-4 divide-y-4">
                 <div class="text-6xl font-semibold">Gantt Chart</div>
-                <img src="/pages/rwarner31/ML-Project/assets/gantt3.png" alt="Gantt" class="w-fuk=ll h-auto" />
+                <img src="/ML-Project/assets/gantt3.png" alt="Gantt" class="w-fuk=ll h-auto" />
             </div>
         </div>
     </div>

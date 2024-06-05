@@ -74,14 +74,14 @@ import Layout from '../layouts/Layout.astro'
             <div class="flex flex-col gap-4 divide-y-4">
                 <div class="text-6xl font-semibold">Results and Discussion</div>
                 <div class="text-3xl font-semibold">Confusion Matrix</div>
-                <img src="/pages/rwarner31/ML-Project/assets/ProjResults.png" alt="Confusion Matrix" class="w-fuk=ll h-auto" />
+                <img src="/ML-Project/assets/ProjResults.png" alt="Confusion Matrix" class="w-fuk=ll h-auto" />
                 <div class="text-2xl">We implemented SVM and visualized our results via the classification report, confusion matrix, and accuracy scores above. Our quantitative scoring metrics are:<strong> accuracy, precision, and recall.</strong> Accuracy of at least 0.9 in distinguishing between AI and human generated images. Accuracy is a good general metric to quantify model performance as it calculates correct predicitions out of total ground truth (labels). Precision of at least 0.9 to show how good the ground truths are represented via true positives out of total ground truth. Recall of at least 0.8 to measure completeness and how well ground truth is recovered via true positive out of actual results; we care that the model is able to correctly identify AI generated images (true positive), but a little less if it mislabels a human generated image as AI (false negative). Project success is additionally quantified by a <strong>f1-score</strong> score of at least 0.8 as it measures precision and completeness.<div class="text-2xl">From our visualization, all of our quantitative scoring metrics and inherent goals were not met. Our predictions were not precise, did not recover the ground truth well, and was not accurate to our standards; it was unable to effectively identify AI generated images from real images. Our model performed poorly because our sample size were small and SVM needs a large sample to train well. Our next steps are using PACE environment, which has more computation power fixing GPU limitations, to run more iterations and on more samples to fix the underfitting problem. 
                 <div>
                     <div class="text-3xl font-semibold">Confusion Matrix for a 1k Testing Set</div>
-                    <!-- <img src="/pages/rwarner31/ML-Project/assets/ProjResults.png" alt="Confusion Matrix" class="w-fuk=ll h-auto" /> -->
+                    <!-- <img src="/ML-Project/assets/ProjResults.png" alt="Confusion Matrix" class="w-fuk=ll h-auto" /> -->
                     <div class="w-full flex justify-center">
                         <div class="p-4 w-1/2">
-                            <img src="/pages/rwarner31/ML-Project/assets/confusion.png" alt="Confusion Matrix" class="w-full h-auto" />
+                            <img src="/ML-Project/assets/confusion.png" alt="Confusion Matrix" class="w-full h-auto" />
                             <!-- <div class="grid grid-cols-4 grid-flow-row">
                                 <div class="col-span-1"></div>
                                 <div class="col-span-1"></div>
@@ -117,7 +117,7 @@ import Layout from '../layouts/Layout.astro'
 
             <div class="flex flex-col gap-4 divide-y-4">
                 <div class="text-6xl font-semibold">Gantt Chart</div>
-                <img src="/pages/rwarner31/ML-Project/assets/Gannt2.png" alt="Gantt" class="w-fuk=ll h-auto" />
+                <img src="/ML-Project/assets/Gannt2.png" alt="Gantt" class="w-fuk=ll h-auto" />
             </div>
         </div>
     </div>
